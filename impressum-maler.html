@@ -2,17 +2,27 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Impressum &amp; Datenschutz – Maler Fürstenfeldbruck</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>Impressum &amp; Datenschutz – Malerin FFB</title>
     <meta name="robots" content="noindex, follow" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230F172A'/%3E%3Cpolygon points='32,8 56,28 56,56 8,56 8,28' fill='none' stroke='white' stroke-width='3.5' stroke-linejoin='round'/%3E%3Crect x='24' y='38' width='16' height='18' fill='white'/%3E%3Cellipse cx='44' cy='26' rx='10' ry='5' fill='%232563EB' transform='rotate(-35,44,26)'/%3E%3Crect x='38' y='30' width='4' height='14' rx='2' fill='%230F172A' transform='rotate(-35,40,37)'/%3E%3C/svg%3E"
+    />
+    <meta name="theme-color" content="#0F172A" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
     <style>
+      /* ─── Reset ─────────────────────────────── */
       *,
       *::before,
       *::after {
@@ -22,118 +32,133 @@
       }
       html {
         scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
       }
 
       :root {
-        --blue: #1d4ed8;
-        --blue-dark: #1e3a8a;
-        --sky-50: #eff6ff;
-        --sky-100: #dbeafe;
-        --sky-200: #bfdbfe;
-        --warm-50: #fafaf7;
-        --warm-100: #f5f5ef;
-        --gray-900: #111827;
-        --gray-800: #1f2937;
-        --gray-700: #374151;
-        --gray-600: #4b5563;
-        --gray-500: #6b7280;
-        --gray-400: #9ca3af;
-        --gray-200: #e5e7eb;
+        --navy: #0f172a;
+        --blue: #2563eb;
+        --blue-h: #1d4ed8;
+        --green: #22c55e;
+        --bg: #f8fafc;
+        --bg2: #f1f5f9;
+        --border: #e2e8f0;
+        --text: #1e293b;
+        --muted: #64748b;
+        --white: #ffffff;
+        --red: #ef4444;
       }
 
       body {
-        font-family: "DM Sans", sans-serif;
-        background: var(--warm-50);
-        color: var(--gray-800);
+        font-family: "Montserrat", sans-serif;
+        background: var(--bg);
+        color: var(--text);
         -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
       }
 
-      body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        pointer-events: none;
-        z-index: 0;
-        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231d4ed8' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      a,
+      button {
+        touch-action: manipulation;
       }
 
+      /* ─── Layout ──────────────────────────────── */
       .wrap {
         width: 100%;
-        max-width: 760px;
+        max-width: 740px;
         margin-inline: auto;
         padding-inline: 1.25rem;
       }
 
-      /* HEADER */
+      /* ─── HEADER ──────────────────────────────── */
       .hdr {
         position: sticky;
         top: 0;
-        z-index: 20;
-        background: rgba(255, 255, 255, 0.88);
-        backdrop-filter: blur(8px);
-        border-bottom: 1px solid var(--sky-100);
+        z-index: 30;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
       }
       .hdr-inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-block: 0.75rem;
+        padding-block: 0.875rem;
+        gap: 1rem;
       }
+
+      /* Logo */
       .logo {
         display: flex;
         align-items: center;
         gap: 0.5rem;
         text-decoration: none;
+        min-width: 0;
       }
-      .logo-icon {
-        font-size: 1.5rem;
-        line-height: 1;
+      .logo svg {
+        flex-shrink: 0;
       }
       .logo-text {
-        font-family: "Lora", serif;
-        font-weight: 600;
-        color: var(--blue-dark);
-        font-size: 1.05rem;
+        font-size: 1rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        color: var(--navy);
+        white-space: nowrap;
       }
-      .logo-sub {
-        font-family: "DM Sans", sans-serif;
-        font-weight: 500;
+      .logo-text span {
         color: var(--blue);
-        font-size: 0.82rem;
-        margin-left: 0.25rem;
-        display: none;
       }
-      @media (min-width: 540px) {
-        .logo-sub {
-          display: inline;
-        }
-      }
+
+      /* Back button */
       .back-btn {
         display: inline-flex;
         align-items: center;
         gap: 0.4rem;
-        font-size: 0.875rem;
-        font-weight: 500;
-        color: var(--blue);
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--navy);
         text-decoration: none;
-        transition: color 0.2s;
-      }
-      .back-btn:hover {
-        color: var(--blue-dark);
+        padding: 0.45rem 0.9rem;
+        border-radius: 0.5rem;
+        border: 2px solid var(--navy);
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition:
+          background 0.15s,
+          color 0.15s;
       }
       .back-btn svg {
-        width: 1rem;
-        height: 1rem;
+        width: 0.9rem;
+        height: 0.9rem;
         stroke: currentColor;
         fill: none;
-        stroke-width: 2;
+        stroke-width: 2.5;
         flex-shrink: 0;
       }
+      .back-btn:active {
+        background: var(--navy);
+        color: var(--white);
+      }
+      .back-txt-short {
+        display: inline;
+      }
+      .back-txt-full {
+        display: none;
+      }
+      @media (min-width: 460px) {
+        .back-txt-short {
+          display: none;
+        }
+        .back-txt-full {
+          display: inline;
+        }
+      }
 
-      /* PAGE NAV */
+      /* ─── PAGE NAV (tab bar) ──────────────────── */
       .page-nav {
-        background: #fff;
-        border-bottom: 1px solid var(--gray-200);
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
         position: relative;
         z-index: 1;
       }
@@ -143,73 +168,82 @@
       .page-nav a {
         flex: 1;
         text-align: center;
-        padding: 0.9rem 1rem;
-        font-size: 0.875rem;
-        font-weight: 500;
-        color: var(--gray-500);
+        padding: 0.875rem 1rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--muted);
         text-decoration: none;
-        border-bottom: 2px solid transparent;
+        border-bottom: 3px solid transparent;
         transition:
-          color 0.2s,
-          border-color 0.2s;
+          color 0.15s,
+          border-color 0.15s;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
       }
-      .page-nav a:hover {
+      .page-nav a:active {
         color: var(--blue);
       }
       .page-nav a.active {
-        color: var(--blue);
+        color: var(--navy);
         border-bottom-color: var(--blue);
       }
 
-      /* CONTENT */
+      /* ─── CONTENT ─────────────────────────────── */
       .content {
         position: relative;
         z-index: 1;
-        padding-block: 3rem 5rem;
+        padding-block: 2.5rem 5rem;
       }
       .legal-section {
-        margin-bottom: 4rem;
-        scroll-margin-top: 5rem;
+        margin-bottom: 3.5rem;
+        scroll-margin-top: 7rem;
       }
 
-      .section-title {
-        font-family: "Lora", serif;
-        font-weight: 700;
-        font-size: 1.65rem;
-        color: var(--gray-900);
-        margin-bottom: 0.35rem;
-        padding-bottom: 0.75rem;
-        border-bottom: 2px solid var(--sky-100);
-      }
+      /* Section heading */
       .section-badge {
         display: inline-block;
-        background: var(--sky-100);
-        color: var(--blue-dark);
-        font-size: 0.68rem;
-        font-weight: 600;
+        background: #eff6ff;
+        color: var(--blue);
+        font-size: 0.65rem;
+        font-weight: 800;
         text-transform: uppercase;
-        letter-spacing: 0.09em;
-        padding: 0.2rem 0.6rem;
+        letter-spacing: 0.1em;
+        padding: 0.2rem 0.65rem;
         border-radius: 999px;
+        border: 1px solid #bfdbfe;
         margin-bottom: 0.75rem;
       }
-
-      .legal-section h3 {
-        font-family: "Lora", serif;
-        font-size: 1.05rem;
-        font-weight: 600;
-        color: var(--gray-900);
-        margin-top: 2rem;
+      .section-title {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--navy);
+        letter-spacing: -0.02em;
         margin-bottom: 0.5rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid var(--border);
+      }
+
+      /* Sub-headings */
+      .legal-section h3 {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--navy);
+        margin-top: 1.75rem;
+        margin-bottom: 0.4rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
       }
       .legal-section h3:first-of-type {
-        margin-top: 1.5rem;
+        margin-top: 1.25rem;
       }
+
+      /* Body text */
       .legal-section p {
-        font-size: 0.9rem;
+        font-size: 0.875rem;
         line-height: 1.85;
-        color: var(--gray-600);
-        margin-bottom: 0.85rem;
+        color: var(--muted);
+        margin-bottom: 0.75rem;
+        font-weight: 500;
       }
       .legal-section p:last-child {
         margin-bottom: 0;
@@ -218,50 +252,56 @@
         color: var(--blue);
         text-decoration: underline;
         word-break: break-all;
+        font-weight: 600;
       }
-      .legal-section a:hover {
-        color: var(--blue-dark);
+      .legal-section a:active {
+        color: var(--blue-h);
       }
 
+      /* Address box */
       .address-block {
-        background: var(--sky-50);
-        border: 1px solid var(--sky-100);
+        background: #eff6ff;
+        border: 1px solid #bfdbfe;
         border-left: 3px solid var(--blue);
-        border-radius: 0.5rem;
+        border-radius: 0.625rem;
         padding: 1rem 1.25rem;
-        font-size: 0.9rem;
+        font-size: 0.875rem;
         line-height: 1.9;
-        color: var(--gray-700);
-        margin-top: 1.25rem;
-        margin-bottom: 1.5rem;
+        color: var(--text);
+        font-weight: 500;
+        margin-top: 1rem;
+        margin-bottom: 1.25rem;
       }
       .address-block strong {
-        color: var(--gray-900);
+        color: var(--navy);
+        font-weight: 800;
         display: block;
         margin-bottom: 0.15rem;
       }
 
+      /* Info box */
       .info-box {
-        background: var(--warm-100);
-        border: 1px solid var(--gray-200);
-        border-radius: 0.5rem;
-        padding: 1rem 1.25rem;
-        font-size: 0.85rem;
+        background: var(--bg2);
+        border: 1px solid var(--border);
+        border-radius: 0.625rem;
+        padding: 0.875rem 1.25rem;
+        font-size: 0.825rem;
         line-height: 1.75;
-        color: var(--gray-600);
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-      }
-      .divider {
-        border: none;
-        border-top: 1px solid var(--gray-200);
-        margin-block: 2.5rem;
+        color: var(--muted);
+        font-weight: 500;
+        margin-block: 0.875rem;
       }
 
-      /* FOOTER */
+      /* Divider */
+      .divider {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin-block: 2rem;
+      }
+
+      /* ─── FOOTER ──────────────────────────────── */
       .ftr {
-        background: #fff;
-        border-top: 1px solid var(--sky-100);
+        background: var(--navy);
         padding-block: 1.5rem;
         position: relative;
         z-index: 1;
@@ -271,8 +311,9 @@
         flex-direction: column;
         align-items: center;
         gap: 0.5rem;
-        font-size: 0.75rem;
-        color: var(--gray-400);
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.35);
+        font-weight: 500;
       }
       @media (min-width: 540px) {
         .ftr-inner {
@@ -282,17 +323,18 @@
       }
       .ftr-links {
         display: flex;
-        gap: 1rem;
+        gap: 1.25rem;
       }
       .ftr-links a {
-        color: inherit;
+        color: rgba(255, 255, 255, 0.4);
         text-decoration: none;
+        font-weight: 700;
       }
-      .ftr-links a:hover {
-        color: var(--gray-600);
+      .ftr-links a:active {
+        color: rgba(255, 255, 255, 0.8);
       }
 
-      /* BACK TO TOP */
+      /* ─── BACK TO TOP ─────────────────────────── */
       .to-top {
         position: fixed;
         bottom: 1.5rem;
@@ -302,25 +344,25 @@
         height: 2.75rem;
         border-radius: 50%;
         background: var(--blue);
-        color: #fff;
+        color: var(--white);
         border: none;
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 4px 16px rgba(29, 78, 216, 0.35);
+        box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
         opacity: 0;
         pointer-events: none;
         transition:
-          opacity 0.25s,
-          transform 0.2s;
+          opacity 0.2s,
+          transform 0.15s;
       }
       .to-top.show {
         opacity: 1;
         pointer-events: auto;
       }
-      .to-top:hover {
-        transform: translateY(-2px);
+      .to-top:active {
+        transform: scale(0.92);
       }
       .to-top svg {
         width: 1.1rem;
@@ -329,25 +371,54 @@
         fill: none;
         stroke-width: 2.5;
       }
-
-      a,
-      button,
-      input {
-        touch-action: manipulation;
-      }
     </style>
   </head>
 
   <body>
+    <!-- HEADER -->
     <header class="hdr">
       <div class="wrap">
         <div class="hdr-inner">
           <a href="index.html" class="logo" aria-label="Zur Startseite">
-            <span class="logo-icon" aria-hidden="true">🖌️</span>
-            <span class="logo-text"
-              >Maler<span class="logo-sub">Fürstenfeldbruck</span></span
+            <svg
+              width="34"
+              height="34"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
+              <rect width="40" height="40" rx="9" fill="#0F172A" />
+              <path
+                d="M20 7L34 17.5V33H6V17.5L20 7Z"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linejoin="round"
+              />
+              <rect x="15" y="23" width="10" height="10" fill="white" />
+              <rect
+                x="23"
+                y="11"
+                width="10"
+                height="5"
+                rx="2.5"
+                fill="#2563EB"
+                transform="rotate(-30 23 11)"
+              />
+              <line
+                x1="29"
+                y1="18"
+                x2="34"
+                y2="27"
+                stroke="#2563EB"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <span class="logo-text">MALERIN <span>FFB</span></span>
           </a>
+
           <a href="index.html" class="back-btn">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path
@@ -356,17 +427,19 @@
                 d="M10 19l-7-7m0 0l7-7m-7 7h18"
               />
             </svg>
-            Zurück zur Startseite
+            <span class="back-txt-short">Zurück</span>
+            <span class="back-txt-full">Zur Startseite</span>
           </a>
         </div>
       </div>
     </header>
 
+    <!-- TAB NAVIGATION -->
     <nav class="page-nav" aria-label="Seitennavigation">
       <div class="wrap">
         <div class="page-nav-inner">
           <a href="#impressum" id="tab-impressum">Impressum</a>
-          <a href="#datenschutz" id="tab-datenschutz">Datenschutzerklärung</a>
+          <a href="#datenschutz" id="tab-datenschutz">Datenschutz</a>
         </div>
       </div>
     </nav>
@@ -374,14 +447,12 @@
     <main>
       <div class="content">
         <div class="wrap">
-          <!-- IMPRESSUM -->
-          <section
-            class="legal-section"
-            id="impressum"
-            aria-labelledby="impressum-heading"
-          >
+          <!-- ══════════════════════════════════════
+             IMPRESSUM
+        ══════════════════════════════════════ -->
+          <section class="legal-section" id="impressum" aria-labelledby="imp-h">
             <p class="section-badge">§ 5 TMG</p>
-            <h1 class="section-title" id="impressum-heading">Impressum</h1>
+            <h1 class="section-title" id="imp-h">Impressum</h1>
 
             <h3>Angaben gemäß § 5 TMG</h3>
             <div class="address-block">
@@ -401,10 +472,10 @@
 
             <hr class="divider" />
 
-            <h3>Berufsbezeichnung und berufsrechtliche Regelungen</h3>
+            <h3>Art der Dienstleistung</h3>
             <p>
-              Dienstleistung: Vermittlung von Malerdienstleistungen<br />Tätigkeitsort:
-              Bundesrepublik Deutschland
+              Dienstleistung: Vermittlung von Malerdienstleistungen<br />
+              Tätigkeitsort: Bundesrepublik Deutschland
             </p>
 
             <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
@@ -416,16 +487,17 @@
 
             <hr class="divider" />
 
-            <h3>Streitschlichtung</h3>
+            <h3>EU-Streitschlichtung</h3>
             <p>
               Die Europäische Kommission stellt eine Plattform zur
-              Online-Streitbeilegung (OS) bereit:
+              Online-Streitbeilegung bereit:
               <a
                 href="https://ec.europa.eu/consumers/odr/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >https://ec.europa.eu/consumers/odr/</a
-              >. Unsere E-Mail-Adresse finden Sie oben im Impressum.
+              >
+                https://ec.europa.eu/consumers/odr/
+              </a>
             </p>
             <p>
               Wir sind nicht bereit oder verpflichtet, an
@@ -437,11 +509,9 @@
             <p>
               Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene
               Inhalte auf diesen Seiten nach den allgemeinen Gesetzen
-              verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter
-              jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde
-              Informationen zu überwachen oder nach Umständen zu forschen, die
-              auf eine rechtswidrige Tätigkeit hinweisen. Bei Bekanntwerden von
-              entsprechenden Rechtsverletzungen werden wir diese Inhalte
+              verantwortlich. Nach §§ 8 bis 10 TMG sind wir nicht verpflichtet,
+              übermittelte oder gespeicherte fremde Informationen zu überwachen.
+              Bei Bekanntwerden von Rechtsverletzungen werden wir diese Inhalte
               umgehend entfernen.
             </p>
 
@@ -456,24 +526,23 @@
 
             <h3>Urheberrecht</h3>
             <p>
-              Die durch den Seitenbetreiber erstellten Inhalte und Werke auf
-              diesen Seiten unterliegen dem deutschen Urheberrecht. Die
-              Vervielfältigung, Bearbeitung, Verbreitung und jede Art der
-              Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der
-              schriftlichen Zustimmung des Autors.
+              Die durch den Seitenbetreiber erstellten Inhalte und Werke
+              unterliegen dem deutschen Urheberrecht. Die Vervielfältigung,
+              Bearbeitung und Verbreitung bedürfen der schriftlichen Zustimmung
+              des Autors.
             </p>
           </section>
 
-          <!-- DATENSCHUTZ -->
+          <!-- ══════════════════════════════════════
+             DATENSCHUTZERKLÄRUNG
+        ══════════════════════════════════════ -->
           <section
             class="legal-section"
             id="datenschutz"
-            aria-labelledby="datenschutz-heading"
+            aria-labelledby="ds-h"
           >
             <p class="section-badge">DSGVO</p>
-            <h2 class="section-title" id="datenschutz-heading">
-              Datenschutzerklärung
-            </h2>
+            <h2 class="section-title" id="ds-h">Datenschutzerklärung</h2>
 
             <h3>1. Datenschutz auf einen Blick</h3>
             <p>
@@ -485,10 +554,9 @@
 
             <h3>2. Verantwortlicher</h3>
             <p>
-              Verantwortlicher im Sinne der DSGVO ist:<br /><br />
+              Verantwortlicher im Sinne der DSGVO:<br /><br />
               Lom-Ali Imadaev<br />
-              Kreuzstraße 1<br />
-              82276 Adelshofen<br />
+              Kreuzstraße 1, 82276 Adelshofen<br />
               E-Mail:
               <a href="mailto:lomaliimadaev@gmail.com"
                 >lomaliimadaev@gmail.com</a
@@ -498,15 +566,16 @@
             <h3>3. Ihre Rechte</h3>
             <p>
               Sie haben jederzeit das Recht auf unentgeltliche Auskunft über
-              Ihre gespeicherten personenbezogenen Daten, deren Herkunft und
-              Empfänger sowie den Zweck der Datenverarbeitung. Außerdem haben
-              Sie ein Recht auf Berichtigung, Sperrung oder Löschung dieser
-              Daten (Art. 15–22 DSGVO). Zuständige Aufsichtsbehörde in Bayern:
+              Ihre gespeicherten personenbezogenen Daten, deren Herkunft,
+              Empfänger und Verarbeitungszweck sowie ein Recht auf Berichtigung
+              oder Löschung (Art. 15–22 DSGVO). Zuständige Aufsichtsbehörde in
+              Bayern:
               <a
                 href="https://www.datenschutz-bayern.de"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Landesbeauftragter für den Datenschutz Bayern (BayLfD)</a
+              >
+                Landesbeauftragter für den Datenschutz Bayern (BayLfD) </a
               >.
             </p>
 
@@ -516,20 +585,22 @@
               Ihre Daten (Name, Telefonnummer, Projektbeschreibung) zur
               Bearbeitung der Anfrage und zur Vermittlung an regionale
               Malerbetriebe verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit.
-              b DSGVO. Die übermittelten Daten werden nicht länger gespeichert
-              als für die Bearbeitung erforderlich.
+              b DSGVO (Vertragsanbahnung). Die Daten werden nicht länger
+              gespeichert als für die Bearbeitung erforderlich und nicht ohne
+              Ihren Auftrag an Dritte weitergegeben.
             </p>
 
             <h3>5. Formularverarbeitung über Formspree</h3>
             <p>
-              Zur technischen Verarbeitung nutzen wir
-              <strong>Formspree</strong> (Formspree, Inc., 2261 Market Street
-              #4956, San Francisco, CA 94114, USA). Ihre Daten werden
-              verschlüsselt übertragen und per E-Mail an uns weitergeleitet.
-              Eine dauerhafte Speicherung zu Werbezwecken findet nicht statt.
-              Die Übertragung in die USA erfolgt auf Basis der
-              Standardvertragsklauseln gem. Art. 46 Abs. 2 lit. c DSGVO.
-              Formspree ist dem EU-U.S. Data Privacy Framework beigetreten.
+              Zur technischen Verarbeitung von Formulareinträgen nutzen wir
+              <strong>Formspree</strong>
+              (Formspree, Inc., 2261 Market Street #4956, San Francisco, CA
+              94114, USA). Ihre Daten werden verschlüsselt übertragen und per
+              E-Mail an uns weitergeleitet. Eine dauerhafte Speicherung zu
+              Werbezwecken findet nicht statt. Die Datenübertragung in die USA
+              erfolgt auf Basis der Standardvertragsklauseln gem. Art. 46 Abs. 2
+              lit. c DSGVO. Formspree ist dem EU-U.S. Data Privacy Framework
+              beigetreten.
             </p>
             <div class="info-box">
               Datenschutzerklärung Formspree:
@@ -537,59 +608,90 @@
                 href="https://formspree.io/legal/privacy-policy"
                 target="_blank"
                 rel="noopener noreferrer"
-                >https://formspree.io/legal/privacy-policy</a
               >
+                https://formspree.io/legal/privacy-policy
+              </a>
             </div>
 
             <h3>6. Google Fonts</h3>
             <p>
-              Diese Seite nutzt Google Fonts der Google LLC, 1600 Amphitheatre
-              Parkway, Mountain View, CA 94043, USA. Dabei wird Ihre IP-Adresse
-              an Google übermittelt. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO
-              (berechtigtes Interesse an einheitlicher Darstellung). Weitere
-              Informationen:
+              Diese Seite nutzt <strong>Google Fonts</strong> (Google LLC, 1600
+              Amphitheatre Parkway, Mountain View, CA 94043, USA). Beim
+              Seitenaufruf lädt Ihr Browser die Schriftarten und übermittelt
+              dabei Ihre IP-Adresse an Google. Rechtsgrundlage: Art. 6 Abs. 1
+              lit. f DSGVO (berechtigtes Interesse an einheitlicher
+              Darstellung). Weitere Informationen:
               <a
                 href="https://policies.google.com/privacy"
                 target="_blank"
                 rel="noopener noreferrer"
-                >https://policies.google.com/privacy</a
               >
+                https://policies.google.com/privacy
+              </a>
             </p>
 
             <h3>7. Server-Logfiles</h3>
             <p>
-              Der Hosting-Provider erhebt automatisch Server-Logfiles
-              (Browsertyp, Betriebssystem, Referrer-URL, IP-Adresse,
-              Zeitstempel). Eine Zusammenführung mit anderen Daten findet nicht
+              Der Hosting-Provider erhebt automatisch Server-Logfiles:
+              Browsertyp, Betriebssystem, Referrer-URL, IP-Adresse, Zeitstempel.
+              Eine Zusammenführung dieser Daten mit anderen Quellen findet nicht
               statt. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.
             </p>
 
             <h3>8. Keine Cookies, kein Tracking</h3>
             <p>
               Diese Website setzt keine Tracking-Cookies und nutzt keine
-              Analyse- oder Werbe-Tracking-Dienste (z.B. Google Analytics, Meta
-              Pixel).
+              Analyse- oder Werbe-Tracking-Dienste (kein Google Analytics, kein
+              Meta Pixel, kein Retargeting).
             </p>
 
             <h3>9. Datensicherheit</h3>
             <p>
-              Diese Seite nutzt SSL-Verschlüsselung (erkennbar am „https://" in
-              der Adresszeile).
+              Die Website nutzt SSL/TLS-Verschlüsselung. Eine verschlüsselte
+              Verbindung erkennen Sie am „https://" in der Browseradresszeile.
             </p>
 
-            <h3>10. Aktualität</h3>
-            <p>Stand: <strong>April 2025</strong>. Änderungen vorbehalten.</p>
+            <h3>10. Aktualität dieser Datenschutzerklärung</h3>
+            <p>
+              Stand: <strong>April 2025</strong>. Änderungen durch
+              Weiterentwicklung der Website oder geänderte gesetzliche Vorgaben
+              bleiben vorbehalten.
+            </p>
           </section>
         </div>
       </div>
     </main>
 
+    <!-- FOOTER -->
     <footer class="ftr">
       <div class="wrap">
         <div class="ftr-inner">
-          <span
-            >&#169; 2025 Maler Fürstenfeldbruck &#8211; Lom-Ali Imadaev</span
-          >
+          <div style="display: flex; align-items: center; gap: 0.5rem">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M20 7L34 17.5V33H6V17.5L20 7Z"
+                fill="none"
+                stroke="rgba(255,255,255,0.25)"
+                stroke-width="2.5"
+                stroke-linejoin="round"
+              />
+              <rect
+                x="15"
+                y="23"
+                width="10"
+                height="10"
+                fill="rgba(255,255,255,0.25)"
+              />
+            </svg>
+            <span>&#169; 2025 Malerin FFB – Lom-Ali Imadaev</span>
+          </div>
           <nav class="ftr-links" aria-label="Footer">
             <a href="#impressum">Impressum</a>
             <a href="#datenschutz">Datenschutz</a>
@@ -599,6 +701,7 @@
       </div>
     </footer>
 
+    <!-- BACK TO TOP -->
     <button class="to-top" id="to-top" aria-label="Nach oben scrollen">
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path
@@ -609,25 +712,16 @@
       </svg>
     </button>
 
-    <script
-      defer
-      src="https://www.impulseto.work/api/pixel.js"
-      data-website-id="fb16d297-3bd4-4b51-939c-bbc471b060f0"
-      data-domain="https://lomtech.github.io/maler-ffb/"
-      data-cookieless="true"
-      data-allow-localhost="true"
-    ></script>
-
     <script>
       (function () {
+        /* Active tab on scroll */
         var tabs = {
           impressum: document.getElementById("tab-impressum"),
           datenschutz: document.getElementById("tab-datenschutz"),
         };
-
         function updateTabs() {
           var active =
-            window.scrollY + 130 >=
+            window.scrollY + 120 >=
             document.getElementById("datenschutz").offsetTop
               ? "datenschutz"
               : "impressum";
@@ -638,6 +732,7 @@
         window.addEventListener("scroll", updateTabs, { passive: true });
         updateTabs();
 
+        /* Back to top */
         var topBtn = document.getElementById("to-top");
         window.addEventListener(
           "scroll",
@@ -650,27 +745,30 @@
           window.scrollTo({ top: 0, behavior: "smooth" });
         });
 
+        /* Smooth scroll + offset for sticky header + tab bar */
         document.querySelectorAll('a[href^="#"]').forEach(function (a) {
           a.addEventListener("click", function (e) {
             var target = document.querySelector(this.getAttribute("href"));
             if (!target) return;
             e.preventDefault();
             window.scrollTo({
-              top: target.getBoundingClientRect().top + window.scrollY - 110,
+              top: target.getBoundingClientRect().top + window.scrollY - 108,
               behavior: "smooth",
             });
           });
         });
 
+        /* Jump to anchor on page load (e.g. from index.html link) */
         if (window.location.hash) {
           setTimeout(function () {
             var el = document.querySelector(window.location.hash);
-            if (el)
+            if (el) {
               window.scrollTo({
-                top: el.getBoundingClientRect().top + window.scrollY - 110,
+                top: el.getBoundingClientRect().top + window.scrollY - 108,
                 behavior: "smooth",
               });
-          }, 120);
+            }
+          }, 150);
         }
       })();
     </script>
