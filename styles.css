@@ -998,7 +998,36 @@ body {
 html,
 body {
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+/* Grid-Blowout verhindern: alle Grid-Kinder brauchen min-width:0 */
+.svc-grid > *,
+.steps > *,
+.hero-grid > *,
+.faq-list > * {
+  min-width: 0;
+}
+
+/* Wrap nie breiter als Viewport */
+.wrap,
+.wrap-sm {
+  min-width: 0;
+  max-width: min(100%, 1100px);
+}
+.wrap-sm {
+  max-width: min(100%, 720px);
+}
+
+/* Alle Top-Level-Blöcke auf 100% begrenzen */
+section,
+header,
+footer,
+.cities,
+.banner {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* Mindest-Tappgröße 44px auf allen interaktiven Elementen */
