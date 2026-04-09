@@ -1,0 +1,1074 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maler Fürstenfeldbruck – Kostenloses Angebot in 24h</title>
+    <meta
+      name="description"
+      content="Maler Fürstenfeldbruck: Kostenlos & unverbindlich Angebote von regionalen Malerbetrieben erhalten. Schnelle Rückmeldung in 24 Stunden. Jetzt anfragen!"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      :root {
+        --blue: #1d4ed8;
+        --blue-dark: #1e3a8a;
+        --sky-50: #eff6ff;
+        --sky-100: #dbeafe;
+        --sky-200: #bfdbfe;
+        --warm-50: #fafaf7;
+        --warm-100: #f5f5ef;
+        --gray-900: #111827;
+        --gray-800: #1f2937;
+        --gray-700: #374151;
+        --gray-600: #4b5563;
+        --gray-500: #6b7280;
+        --gray-400: #9ca3af;
+        --gray-200: #e5e7eb;
+        --red: #ef4444;
+      }
+
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: var(--warm-50);
+        color: var(--gray-800);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231d4ed8' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+
+      .wrap {
+        width: 100%;
+        max-width: 1024px;
+        margin-inline: auto;
+        padding-inline: 1rem;
+      }
+      .wrap-sm {
+        width: 100%;
+        max-width: 768px;
+        margin-inline: auto;
+        padding-inline: 1rem;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(16px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fu {
+        animation: fadeUp 0.6s ease both;
+      }
+      .fu2 {
+        animation: fadeUp 0.6s 0.15s ease both;
+      }
+      .fu3 {
+        animation: fadeUp 0.6s 0.3s ease both;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .spin {
+        animation: spin 0.8s linear infinite;
+      }
+
+      .ic {
+        width: 1.25rem;
+        height: 1.25rem;
+        flex-shrink: 0;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 2;
+      }
+      .ic-sm {
+        width: 1rem;
+        height: 1rem;
+      }
+      .ic-lg {
+        width: 2rem;
+        height: 2rem;
+      }
+      .ic-blu {
+        color: var(--blue);
+      }
+
+      /* HEADER */
+      .hdr {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--sky-100);
+      }
+      .hdr-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block: 0.75rem;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .logo-icon {
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+      .logo-text {
+        font-family: "Lora", serif;
+        font-weight: 600;
+        color: var(--blue-dark);
+        font-size: 1.1rem;
+      }
+      .logo-sub {
+        font-family: "DM Sans", sans-serif;
+        font-weight: 500;
+        color: var(--blue);
+        font-size: 0.82rem;
+        margin-left: 0.25rem;
+        display: none;
+      }
+      @media (min-width: 640px) {
+        .logo-sub {
+          display: inline;
+        }
+      }
+      .tel-link {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--blue);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .tel-link:hover {
+        color: var(--blue-dark);
+      }
+      .tel-full {
+        display: none;
+      }
+      .tel-short {
+        display: inline;
+      }
+      @media (min-width: 640px) {
+        .tel-full {
+          display: inline;
+        }
+        .tel-short {
+          display: none;
+        }
+      }
+
+      /* HERO */
+      .hero {
+        background: linear-gradient(
+          160deg,
+          var(--sky-50) 0%,
+          var(--warm-50) 55%,
+          var(--warm-100) 100%
+        );
+        padding-block: 2.5rem 4rem;
+        position: relative;
+        z-index: 1;
+      }
+      .hero-grid {
+        display: grid;
+        gap: 2.5rem;
+      }
+      @media (min-width: 768px) {
+        .hero {
+          padding-block: 4rem 6rem;
+        }
+        .hero-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 4rem;
+          align-items: start;
+        }
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--sky-100);
+        color: var(--blue-dark);
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        padding: 0.35rem 0.75rem;
+        border-radius: 999px;
+        margin-bottom: 1.25rem;
+      }
+      .eyebrow-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--blue);
+        display: inline-block;
+      }
+
+      h1 {
+        font-family: "Lora", serif;
+        font-weight: 700;
+        font-size: clamp(1.9rem, 5vw, 3rem);
+        line-height: 1.2;
+        color: var(--gray-900);
+        margin-bottom: 1rem;
+      }
+      h1 span {
+        color: var(--blue);
+      }
+      .hero-lead {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: var(--gray-600);
+        margin-bottom: 2rem;
+      }
+      .hero-lead strong {
+        color: var(--gray-800);
+      }
+
+      .trust-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+      }
+      .trust-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 0.25rem 0 0.25rem 0.75rem;
+        border-left: 3px solid var(--blue);
+      }
+      .trust-title {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--gray-800);
+      }
+      .trust-sub {
+        font-size: 0.75rem;
+        color: var(--gray-500);
+      }
+
+      /* FORM CARD */
+      .card {
+        background: #fff;
+        border-radius: 1rem;
+        border: 1px solid var(--sky-100);
+        box-shadow: 0 8px 32px rgba(29, 78, 216, 0.09);
+        padding: 1.75rem;
+      }
+      @media (min-width: 480px) {
+        .card {
+          padding: 2rem;
+        }
+      }
+      .card-title {
+        font-family: "Lora", serif;
+        font-size: 1.25rem;
+        color: var(--gray-900);
+        margin-bottom: 0.25rem;
+      }
+      .card-sub {
+        font-size: 0.8rem;
+        color: var(--gray-500);
+        margin-bottom: 1.5rem;
+      }
+
+      .field {
+        margin-bottom: 1rem;
+      }
+      .field label {
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--gray-700);
+        margin-bottom: 0.3rem;
+      }
+      .req {
+        color: var(--red);
+      }
+      .field input,
+      .field textarea {
+        width: 100%;
+        border: 1px solid var(--gray-200);
+        border-radius: 0.5rem;
+        padding: 0.625rem 1rem;
+        font-size: 0.875rem;
+        font-family: "DM Sans", sans-serif;
+        background: var(--warm-50);
+        color: var(--gray-800);
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+        appearance: none;
+        -webkit-appearance: none;
+      }
+      .field input:focus,
+      .field textarea:focus {
+        outline: none;
+        border-color: var(--blue);
+        box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.15);
+      }
+      .field textarea {
+        resize: none;
+      }
+      .ferr {
+        font-size: 0.72rem;
+        color: var(--red);
+        margin-top: 0.25rem;
+        display: none;
+      }
+      .ferr.show {
+        display: block;
+      }
+
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+        background: var(--blue);
+        color: #fff;
+        font-family: "DM Sans", sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.9rem 1.5rem;
+        border: none;
+        border-radius: 0.75rem;
+        cursor: pointer;
+        text-decoration: none;
+        transition:
+          background 0.2s,
+          transform 0.15s,
+          box-shadow 0.2s;
+      }
+      .btn:hover {
+        background: var(--blue-dark);
+        transform: translateY(-1px);
+        box-shadow: 0 8px 24px rgba(29, 78, 216, 0.3);
+      }
+      .btn:active {
+        transform: translateY(0);
+      }
+      .btn:disabled {
+        opacity: 0.65;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+      }
+      .btn-inv {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        background: #fff;
+        color: var(--blue-dark);
+        font-family: "DM Sans", sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.9rem 2rem;
+        border-radius: 0.75rem;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.2s;
+      }
+      .btn-inv:hover {
+        background: var(--sky-50);
+      }
+
+      .legal {
+        font-size: 0.7rem;
+        text-align: center;
+        color: var(--gray-400);
+        margin-top: 0.75rem;
+      }
+      .legal a {
+        color: inherit;
+        text-decoration: underline;
+      }
+      .legal a:hover {
+        color: var(--gray-600);
+      }
+
+      #ok {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2.5rem 1rem;
+      }
+      #ok.show {
+        display: flex;
+      }
+      .ok-icon {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        background: var(--sky-100);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.25rem;
+        color: var(--blue);
+      }
+      .ok-title {
+        font-family: "Lora", serif;
+        font-size: 1.3rem;
+        color: var(--gray-900);
+        margin-bottom: 0.5rem;
+      }
+      .ok-body {
+        font-size: 0.875rem;
+        color: var(--gray-600);
+        line-height: 1.65;
+        max-width: 17rem;
+      }
+
+      /* HOW */
+      .how {
+        background: #fff;
+        border-top: 1px solid var(--sky-100);
+        border-bottom: 1px solid var(--sky-100);
+        padding-block: 4rem;
+        position: relative;
+        z-index: 1;
+      }
+      .sec-h {
+        font-family: "Lora", serif;
+        font-size: clamp(1.4rem, 4vw, 2rem);
+        text-align: center;
+        color: var(--gray-900);
+        margin-bottom: 2.5rem;
+      }
+      .sec-p {
+        text-align: center;
+        font-size: 0.875rem;
+        color: var(--gray-500);
+        margin-top: 0.4rem;
+        margin-bottom: 2.5rem;
+      }
+      .steps {
+        display: grid;
+        gap: 2rem;
+      }
+      @media (min-width: 640px) {
+        .steps {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      .step {
+        text-align: center;
+      }
+      .step-num {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background: var(--sky-100);
+        color: var(--blue-dark);
+        font-size: 1.1rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+      }
+      .step-title {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--gray-800);
+        margin-bottom: 0.35rem;
+      }
+      .step-body {
+        font-size: 0.825rem;
+        color: var(--gray-500);
+        line-height: 1.6;
+      }
+
+      /* SERVICES */
+      .svcs {
+        background: var(--warm-100);
+        padding-block: 4rem;
+        position: relative;
+        z-index: 1;
+      }
+      .svc-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.625rem;
+      }
+      @media (min-width: 640px) {
+        .svc-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      .svc-tile {
+        background: #fff;
+        border: 1px solid var(--sky-100);
+        border-radius: 0.75rem;
+        padding: 0.75rem 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--gray-700);
+      }
+      .svc-icon {
+        font-size: 1.25rem;
+        line-height: 1;
+        flex-shrink: 0;
+      }
+
+      /* BANNER */
+      .banner {
+        background: var(--blue-dark);
+        padding-block: 4rem;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+      .banner h2 {
+        font-family: "Lora", serif;
+        font-size: clamp(1.4rem, 4vw, 2rem);
+        color: #fff;
+        margin-bottom: 1rem;
+      }
+      .banner p {
+        font-size: 0.875rem;
+        color: var(--sky-200);
+        line-height: 1.7;
+        margin-bottom: 2rem;
+      }
+
+      /* FOOTER */
+      .ftr {
+        background: #fff;
+        border-top: 1px solid var(--sky-100);
+        padding-block: 1.5rem;
+        position: relative;
+        z-index: 1;
+      }
+      .ftr-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        color: var(--gray-400);
+      }
+      @media (min-width: 640px) {
+        .ftr-inner {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+      .ftr-links {
+        display: flex;
+        gap: 1rem;
+      }
+      .ftr-links a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .ftr-links a:hover {
+        color: var(--gray-600);
+      }
+
+      /* STICKY */
+      .sticky {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        padding: 1rem;
+        background: #fff;
+        border-top: 1px solid var(--sky-100);
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+      }
+      @media (max-width: 767px) {
+        .sticky {
+          display: block;
+        }
+        main {
+          padding-bottom: 5.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="hdr">
+      <div class="wrap">
+        <div class="hdr-inner">
+          <div class="logo">
+            <span class="logo-icon" aria-hidden="true">🖌️</span>
+            <span class="logo-text"
+              >Maler<span class="logo-sub">Fürstenfeldbruck</span></span
+            >
+          </div>
+          <a href="tel:+4981411234567" class="tel-link">
+            <svg class="ic ic-sm" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.515l.516 2.063a2 2 0 01-.45 1.958l-.527.527a16.054 16.054 0 006.586 6.586l.527-.527a2 2 0 011.958-.45l2.063.516A2 2 0 0121 17.72V20a2 2 0 01-2 2h-1C9.163 22 2 14.837 2 6V5z"
+              />
+            </svg>
+            <span class="tel-full">+49 151 27 6000 77</span>
+            <span class="tel-short">Anrufen</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <div class="hero-grid">
+            <div class="fu">
+              <div class="eyebrow">
+                <span class="eyebrow-dot" aria-hidden="true"></span>
+                Fürstenfeldbruck &amp; Umgebung
+              </div>
+              <h1>
+                Ihr Malerprojekt.<br /><span
+                  >Regional. Schnell.<br />Kostenlos vermittelt.</span
+                >
+              </h1>
+              <p class="hero-lead">
+                Beschreiben Sie Ihr Vorhaben – wir verbinden Sie kostenlos und
+                unverbindlich mit geprüften Malerbetrieben aus Fürstenfeldbruck
+                und Umgebung.
+                <strong>Rückmeldung innerhalb von 24 Stunden.</strong>
+              </p>
+
+              <ul class="trust-list" aria-label="Vertrauenspunkte">
+                <li class="trust-item">
+                  <svg class="ic ic-blu" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                  <div>
+                    <p class="trust-title">Regionale Fachbetriebe</p>
+                    <p class="trust-sub">
+                      Nur geprüfte Betriebe aus dem Landkreis FFB
+                    </p>
+                  </div>
+                </li>
+                <li class="trust-item">
+                  <svg class="ic ic-blu" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <div>
+                    <p class="trust-title">Rückmeldung in 24 h</p>
+                    <p class="trust-sub">
+                      Wir melden uns schnell – ohne lange Wartezeiten
+                    </p>
+                  </div>
+                </li>
+                <li class="trust-item">
+                  <svg class="ic ic-blu" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <div>
+                    <p class="trust-title">
+                      100 % kostenlos &amp; unverbindlich
+                    </p>
+                    <p class="trust-sub">
+                      Kein Risiko. Keine versteckten Kosten.
+                    </p>
+                  </div>
+                </li>
+                <li class="trust-item">
+                  <svg class="ic ic-blu" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                    />
+                  </svg>
+                  <div>
+                    <p class="trust-title">Bereits viele Projekte vermittelt</p>
+                    <p class="trust-sub">Zufriedene Kunden in der Region</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="fu2" id="form-anchor">
+              <div class="card">
+                <h2 class="card-title">Angebot jetzt anfordern</h2>
+                <p class="card-sub">
+                  Kostenlos · Unverbindlich · In 24 h Rückmeldung
+                </p>
+
+                <div id="ok" role="alert">
+                  <div class="ok-icon">
+                    <svg
+                      class="ic ic-lg"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <p class="ok-title">Vielen Dank!</p>
+                  <p class="ok-body">
+                    Ihre Anfrage ist eingegangen. Wir melden uns
+                    <strong>innerhalb von 24 Stunden</strong> bei Ihnen.
+                  </p>
+                </div>
+
+                <form
+                  id="lf"
+                  action="https://formspree.io/f/xojpzlwp"
+                  method="POST"
+                  novalidate
+                >
+                  <div class="field">
+                    <label for="name"
+                      >Ihr Name <span class="req">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      placeholder="Max Mustermann"
+                      autocomplete="name"
+                    />
+                    <p class="ferr" id="e-name">
+                      Bitte geben Sie Ihren Namen ein.
+                    </p>
+                  </div>
+
+                  <div class="field">
+                    <label for="phone"
+                      >Telefonnummer <span class="req">*</span></label
+                    >
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="telefon"
+                      required
+                      placeholder="+49 8141 ..."
+                      autocomplete="tel"
+                    />
+                    <p class="ferr" id="e-phone">
+                      Bitte geben Sie Ihre Telefonnummer ein.
+                    </p>
+                  </div>
+
+                  <div class="field">
+                    <label for="proj"
+                      >Ihr Projekt <span class="req">*</span></label
+                    >
+                    <textarea
+                      id="proj"
+                      name="projekt"
+                      required
+                      rows="4"
+                      placeholder="z.B. Wohnzimmer streichen, Fassade renovieren, Tapezierarbeiten, Lackierarbeiten ..."
+                    ></textarea>
+                    <p class="ferr" id="e-proj">
+                      Bitte beschreiben Sie Ihr Projekt kurz.
+                    </p>
+                  </div>
+
+                  <input
+                    type="text"
+                    name="_gotcha"
+                    style="display: none"
+                    tabindex="-1"
+                    autocomplete="off"
+                  />
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="Neue Maler-Anfrage - Fürstenfeldbruck"
+                  />
+
+                  <button type="submit" id="sbmt" class="btn">
+                    <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    Kostenloses Angebot anfordern
+                  </button>
+
+                  <p class="legal">
+                    Mit dem Absenden stimmen Sie unserer
+                    <a href="impressum-maler.html#datenschutz"
+                      >Datenschutzerklärung</a
+                    >
+                    zu.
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="how">
+        <div class="wrap">
+          <h2 class="sec-h">So einfach funktioniert es</h2>
+          <div class="steps">
+            <div class="step fu">
+              <div class="step-num">1</div>
+              <h3 class="step-title">Anfrage absenden</h3>
+              <p class="step-body">
+                Formular ausfüllen – dauert unter 2 Minuten.
+              </p>
+            </div>
+            <div class="step fu2">
+              <div class="step-num">2</div>
+              <h3 class="step-title">Wir vermitteln</h3>
+              <p class="step-body">
+                Wir leiten Ihre Anfrage an passende Malerbetriebe aus FFB
+                weiter.
+              </p>
+            </div>
+            <div class="step fu3">
+              <div class="step-num">3</div>
+              <h3 class="step-title">Angebot erhalten</h3>
+              <p class="step-body">
+                Sie erhalten eine Rückmeldung – kostenlos und unverbindlich.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="svcs">
+        <div class="wrap">
+          <h2 class="sec-h">Was wir vermitteln</h2>
+          <p class="sec-p">
+            Malerprojekte jeder Größe in Fürstenfeldbruck &amp; Umgebung
+          </p>
+          <div class="svc-grid">
+            <div class="svc-tile">
+              <span class="svc-icon">🏠</span>Innenanstrich
+            </div>
+            <div class="svc-tile">
+              <span class="svc-icon">🏢</span>Außenanstrich
+            </div>
+            <div class="svc-tile">
+              <span class="svc-icon">🧱</span>Fassadengestaltung
+            </div>
+            <div class="svc-tile">
+              <span class="svc-icon">📜</span>Tapezierarbeiten
+            </div>
+            <div class="svc-tile">
+              <span class="svc-icon">🪵</span>Lackierarbeiten
+            </div>
+            <div class="svc-tile">
+              <span class="svc-icon">🪟</span>Fenster &amp; Türen
+            </div>
+            <div class="svc-tile">
+              <span class="svc-icon">🔥</span>Schimmelbeseitigung
+            </div>
+            <div class="svc-tile">
+              <span class="svc-icon">🏗️</span>Renovierungsarbeiten
+            </div>
+            <div class="svc-tile">
+              <span class="svc-icon">🌡️</span>Wärmedämmung (WDVS)
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="banner">
+        <div class="wrap-sm">
+          <h2>Bereit für frische Farbe?</h2>
+          <p>
+            Jetzt kostenlos Angebot anfordern – regionale Malerbetriebe melden
+            sich innerhalb von 24 Stunden.
+          </p>
+          <a href="#form-anchor" class="btn-inv">
+            <svg
+              class="ic"
+              style="color: var(--blue)"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            Kostenloses Angebot anfordern
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="ftr">
+      <div class="wrap">
+        <div class="ftr-inner">
+          <span
+            >&#169; 2025 Maler Fürstenfeldbruck &#8211; Alle Rechte
+            vorbehalten</span
+          >
+          <nav class="ftr-links" aria-label="Footer-Navigation">
+            <a href="impressum-maler.html#datenschutz">Datenschutz</a>
+            <a href="impressum-maler.html#impressum">Impressum</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <div class="sticky" id="sticky-bar">
+      <a href="#form-anchor" class="btn">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+        Kostenloses Angebot anfordern
+      </a>
+    </div>
+
+    <script>
+      (function () {
+        var form = document.getElementById("lf");
+        var okEl = document.getElementById("ok");
+        var btnEl = document.getElementById("sbmt");
+        var stickyBar = document.getElementById("sticky-bar");
+
+        function setErr(id, show) {
+          document.getElementById(id).classList.toggle("show", show);
+        }
+
+        form.addEventListener("submit", async function (e) {
+          e.preventDefault();
+          var name = document.getElementById("name").value.trim();
+          var phone = document.getElementById("phone").value.trim();
+          var proj = document.getElementById("proj").value.trim();
+          var valid = true;
+          setErr("e-name", !name);
+          if (!name) valid = false;
+          setErr("e-phone", !phone);
+          if (!phone) valid = false;
+          setErr("e-proj", !proj);
+          if (!proj) valid = false;
+          if (!valid) return;
+
+          btnEl.disabled = true;
+          btnEl.innerHTML =
+            '<svg class="ic spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">' +
+            '<circle cx="12" cy="12" r="10" stroke-opacity=".25"/>' +
+            '<path d="M4 12a8 8 0 018-8" stroke-linecap="round"/></svg> Wird gesendet...';
+
+          try {
+            var res = await fetch(form.action, {
+              method: "POST",
+              body: new FormData(form),
+              headers: { Accept: "application/json" },
+            });
+            if (res.ok) {
+              form.style.display = "none";
+              okEl.classList.add("show");
+              stickyBar.style.display = "none";
+            } else {
+              throw new Error();
+            }
+          } catch (_) {
+            btnEl.disabled = false;
+            btnEl.innerHTML =
+              '<svg class="ic" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>' +
+              " Kostenloses Angebot anfordern";
+            alert("Fehler beim Senden. Bitte erneut versuchen oder anrufen.");
+          }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+          a.addEventListener("click", function (e) {
+            var target = document.querySelector(this.getAttribute("href"));
+            if (!target) return;
+            e.preventDefault();
+            window.scrollTo({
+              top: target.getBoundingClientRect().top + window.scrollY - 72,
+              behavior: "smooth",
+            });
+            var first = target.querySelector("input, textarea");
+            if (first)
+              setTimeout(function () {
+                first.focus();
+              }, 520);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

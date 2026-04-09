@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impressum &amp; Datenschutz – Maler Fürstenfeldbruck</title>
+    <meta name="robots" content="noindex, follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      :root {
+        --blue: #1d4ed8;
+        --blue-dark: #1e3a8a;
+        --sky-50: #eff6ff;
+        --sky-100: #dbeafe;
+        --sky-200: #bfdbfe;
+        --warm-50: #fafaf7;
+        --warm-100: #f5f5ef;
+        --gray-900: #111827;
+        --gray-800: #1f2937;
+        --gray-700: #374151;
+        --gray-600: #4b5563;
+        --gray-500: #6b7280;
+        --gray-400: #9ca3af;
+        --gray-200: #e5e7eb;
+      }
+
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: var(--warm-50);
+        color: var(--gray-800);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231d4ed8' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+
+      .wrap {
+        width: 100%;
+        max-width: 760px;
+        margin-inline: auto;
+        padding-inline: 1.25rem;
+      }
+
+      /* HEADER */
+      .hdr {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--sky-100);
+      }
+      .hdr-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block: 0.75rem;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+      }
+      .logo-icon {
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+      .logo-text {
+        font-family: "Lora", serif;
+        font-weight: 600;
+        color: var(--blue-dark);
+        font-size: 1.05rem;
+      }
+      .logo-sub {
+        font-family: "DM Sans", sans-serif;
+        font-weight: 500;
+        color: var(--blue);
+        font-size: 0.82rem;
+        margin-left: 0.25rem;
+        display: none;
+      }
+      @media (min-width: 540px) {
+        .logo-sub {
+          display: inline;
+        }
+      }
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--blue);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .back-btn:hover {
+        color: var(--blue-dark);
+      }
+      .back-btn svg {
+        width: 1rem;
+        height: 1rem;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 2;
+        flex-shrink: 0;
+      }
+
+      /* PAGE NAV */
+      .page-nav {
+        background: #fff;
+        border-bottom: 1px solid var(--gray-200);
+        position: relative;
+        z-index: 1;
+      }
+      .page-nav-inner {
+        display: flex;
+      }
+      .page-nav a {
+        flex: 1;
+        text-align: center;
+        padding: 0.9rem 1rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--gray-500);
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition:
+          color 0.2s,
+          border-color 0.2s;
+      }
+      .page-nav a:hover {
+        color: var(--blue);
+      }
+      .page-nav a.active {
+        color: var(--blue);
+        border-bottom-color: var(--blue);
+      }
+
+      /* CONTENT */
+      .content {
+        position: relative;
+        z-index: 1;
+        padding-block: 3rem 5rem;
+      }
+      .legal-section {
+        margin-bottom: 4rem;
+        scroll-margin-top: 5rem;
+      }
+
+      .section-title {
+        font-family: "Lora", serif;
+        font-weight: 700;
+        font-size: 1.65rem;
+        color: var(--gray-900);
+        margin-bottom: 0.35rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid var(--sky-100);
+      }
+      .section-badge {
+        display: inline-block;
+        background: var(--sky-100);
+        color: var(--blue-dark);
+        font-size: 0.68rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        padding: 0.2rem 0.6rem;
+        border-radius: 999px;
+        margin-bottom: 0.75rem;
+      }
+
+      .legal-section h3 {
+        font-family: "Lora", serif;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--gray-900);
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      .legal-section h3:first-of-type {
+        margin-top: 1.5rem;
+      }
+      .legal-section p {
+        font-size: 0.9rem;
+        line-height: 1.85;
+        color: var(--gray-600);
+        margin-bottom: 0.85rem;
+      }
+      .legal-section p:last-child {
+        margin-bottom: 0;
+      }
+      .legal-section a {
+        color: var(--blue);
+        text-decoration: underline;
+        word-break: break-all;
+      }
+      .legal-section a:hover {
+        color: var(--blue-dark);
+      }
+
+      .address-block {
+        background: var(--sky-50);
+        border: 1px solid var(--sky-100);
+        border-left: 3px solid var(--blue);
+        border-radius: 0.5rem;
+        padding: 1rem 1.25rem;
+        font-size: 0.9rem;
+        line-height: 1.9;
+        color: var(--gray-700);
+        margin-top: 1.25rem;
+        margin-bottom: 1.5rem;
+      }
+      .address-block strong {
+        color: var(--gray-900);
+        display: block;
+        margin-bottom: 0.15rem;
+      }
+
+      .info-box {
+        background: var(--warm-100);
+        border: 1px solid var(--gray-200);
+        border-radius: 0.5rem;
+        padding: 1rem 1.25rem;
+        font-size: 0.85rem;
+        line-height: 1.75;
+        color: var(--gray-600);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+      .divider {
+        border: none;
+        border-top: 1px solid var(--gray-200);
+        margin-block: 2.5rem;
+      }
+
+      /* FOOTER */
+      .ftr {
+        background: #fff;
+        border-top: 1px solid var(--sky-100);
+        padding-block: 1.5rem;
+        position: relative;
+        z-index: 1;
+      }
+      .ftr-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        color: var(--gray-400);
+      }
+      @media (min-width: 540px) {
+        .ftr-inner {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+      .ftr-links {
+        display: flex;
+        gap: 1rem;
+      }
+      .ftr-links a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .ftr-links a:hover {
+        color: var(--gray-600);
+      }
+
+      /* BACK TO TOP */
+      .to-top {
+        position: fixed;
+        bottom: 1.5rem;
+        right: 1.25rem;
+        z-index: 40;
+        width: 2.75rem;
+        height: 2.75rem;
+        border-radius: 50%;
+        background: var(--blue);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 16px rgba(29, 78, 216, 0.35);
+        opacity: 0;
+        pointer-events: none;
+        transition:
+          opacity 0.25s,
+          transform 0.2s;
+      }
+      .to-top.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .to-top:hover {
+        transform: translateY(-2px);
+      }
+      .to-top svg {
+        width: 1.1rem;
+        height: 1.1rem;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 2.5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="hdr">
+      <div class="wrap">
+        <div class="hdr-inner">
+          <a
+            href="maler-ffb.html"
+            class="logo"
+            aria-label="Zurück zur Startseite"
+          >
+            <span class="logo-icon" aria-hidden="true">🖌️</span>
+            <span class="logo-text"
+              >Maler<span class="logo-sub">Fürstenfeldbruck</span></span
+            >
+          </a>
+          <a href="maler-ffb.html" class="back-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
+            </svg>
+            Zurück zur Startseite
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="page-nav" aria-label="Seitennavigation">
+      <div class="wrap">
+        <div class="page-nav-inner">
+          <a href="#impressum" id="tab-impressum">Impressum</a>
+          <a href="#datenschutz" id="tab-datenschutz">Datenschutzerklärung</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="content">
+        <div class="wrap">
+          <!-- IMPRESSUM -->
+          <section
+            class="legal-section"
+            id="impressum"
+            aria-labelledby="impressum-heading"
+          >
+            <p class="section-badge">§ 5 TMG</p>
+            <h1 class="section-title" id="impressum-heading">Impressum</h1>
+
+            <h3>Angaben gemäß § 5 TMG</h3>
+            <div class="address-block">
+              <strong>Lom-Ali Imadaev</strong>
+              Kreuzstraße 1<br />
+              82276 Adelshofen<br />
+              Deutschland
+            </div>
+
+            <h3>Kontakt</h3>
+            <p>
+              E-Mail:
+              <a href="mailto:[lomaliimadaev@gmail.com]"
+                >lomaliimadaev@gmail.com</a
+              >
+            </p>
+
+            <hr class="divider" />
+
+            <h3>Berufsbezeichnung und berufsrechtliche Regelungen</h3>
+            <p>
+              Dienstleistung: Vermittlung von Malerdienstleistungen<br />Tätigkeitsort:
+              Bundesrepublik Deutschland
+            </p>
+
+            <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
+            <p>
+              Lom-Ali Imadaev<br />Kreuzstraße 1<br />82276
+              Adelshofen
+            </p>
+
+            <hr class="divider" />
+
+            <h3>Streitschlichtung</h3>
+            <p>
+              Die Europäische Kommission stellt eine Plattform zur
+              Online-Streitbeilegung (OS) bereit:
+              <a
+                href="https://ec.europa.eu/consumers/odr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://ec.europa.eu/consumers/odr/</a
+              >. Unsere E-Mail-Adresse finden Sie oben im Impressum.
+            </p>
+            <p>
+              Wir sind nicht bereit oder verpflichtet, an
+              Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
+              teilzunehmen.
+            </p>
+
+            <h3>Haftung für Inhalte</h3>
+            <p>
+              Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene
+              Inhalte auf diesen Seiten nach den allgemeinen Gesetzen
+              verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter
+              jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde
+              Informationen zu überwachen oder nach Umständen zu forschen, die
+              auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur
+              Entfernung oder Sperrung der Nutzung von Informationen nach den
+              allgemeinen Gesetzen bleiben hiervon unberührt. Eine
+              diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der
+              Kenntnis einer konkreten Rechtsverletzung möglich. Bei
+              Bekanntwerden von entsprechenden Rechtsverletzungen werden wir
+              diese Inhalte umgehend entfernen.
+            </p>
+
+            <h3>Haftung für Links</h3>
+            <p>
+              Unser Angebot enthält Links zu externen Websites Dritter, auf
+              deren Inhalte wir keinen Einfluss haben. Deshalb können wir für
+              diese fremden Inhalte auch keine Gewähr übernehmen. Für die
+              Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter
+              oder Betreiber der Seiten verantwortlich. Bei Bekanntwerden von
+              Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+            </p>
+
+            <h3>Urheberrecht</h3>
+            <p>
+              Die durch den Seitenbetreiber erstellten Inhalte und Werke auf
+              diesen Seiten unterliegen dem deutschen Urheberrecht. Die
+              Vervielfältigung, Bearbeitung, Verbreitung und jede Art der
+              Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der
+              schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+            </p>
+          </section>
+
+          <!-- DATENSCHUTZ -->
+          <section
+            class="legal-section"
+            id="datenschutz"
+            aria-labelledby="datenschutz-heading"
+          >
+            <p class="section-badge">DSGVO</p>
+            <h2 class="section-title" id="datenschutz-heading">
+              Datenschutzerklärung
+            </h2>
+
+            <h3>1. Datenschutz auf einen Blick</h3>
+            <p>
+              Die folgenden Hinweise geben einen einfachen Überblick darüber,
+              was mit Ihren personenbezogenen Daten passiert, wenn Sie diese
+              Website besuchen. Personenbezogene Daten sind alle Daten, mit
+              denen Sie persönlich identifiziert werden können.
+            </p>
+
+            <h3>2. Verantwortlicher</h3>
+            <p>
+              Verantwortlicher im Sinne der DSGVO ist:<br /><br />
+              Lom-Ali Imadaev<br />
+              Kreuzstraße 1<br />
+              82276 Adelshofen<br />
+              E-Mail:
+              <a href="mailto:[lomaliimadaev@gmail.com]"
+                >lomaliimadaev@gmail.com</a
+              >
+            </p>
+
+            <h3>3. Ihre Rechte</h3>
+            <p>
+              Sie haben jederzeit das Recht auf unentgeltliche Auskunft über
+              Ihre gespeicherten personenbezogenen Daten, deren Herkunft und
+              Empfänger sowie den Zweck der Datenverarbeitung. Außerdem haben
+              Sie ein Recht auf Berichtigung, Sperrung oder Löschung dieser
+              Daten (Art. 15–22 DSGVO). Sie haben außerdem das Recht, bei einer
+              Datenschutz-Aufsichtsbehörde Beschwerde einzulegen. Zuständig in
+              Bayern ist der
+              <a
+                href="https://www.datenschutz-bayern.de"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Landesbeauftragte für den Datenschutz Bayern (BayLfD)</a
+              >.
+            </p>
+
+            <h3>4. Kontaktformular und Lead-Vermittlung</h3>
+            <p>
+              Wenn Sie über das Kontaktformular auf dieser Website eine Anfrage
+              stellen, werden die von Ihnen eingegebenen Daten (Name,
+              Telefonnummer, Projektbeschreibung) zum Zweck der Bearbeitung der
+              Anfrage und zur Vermittlung an regionale Malerbetriebe
+              verarbeitet.
+            </p>
+            <p>
+              Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung)
+              sowie – soweit die Vermittlung Ihr ausdrückliches Anliegen ist –
+              Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Die übermittelten Daten
+              werden nicht länger gespeichert, als es für die Bearbeitung Ihrer
+              Anfrage erforderlich ist.
+            </p>
+
+            <h3>5. Formularverarbeitung über Formspree</h3>
+            <p>
+              Zur technischen Verarbeitung von Formulareinträgen nutzen wir den
+              Dienst <strong>Formspree</strong> (Anbieter: Formspree, Inc., 2261
+              Market Street #4956, San Francisco, CA 94114, USA). Die über das
+              Formular eingegebenen Daten werden verschlüsselt an die Server von
+              Formspree übertragen und anschließend per E-Mail an uns
+              weitergeleitet. Formspree speichert Formulareinträge vorübergehend
+              auf eigenen Servern zur Zustellung; eine dauerhafte Speicherung zu
+              Werbezwecken findet nicht statt.
+            </p>
+            <p>
+              Die Datenübertragung in die USA erfolgt auf Basis der
+              Standardvertragsklauseln der Europäischen Kommission (Art. 46 Abs.
+              2 lit. c DSGVO). Formspree ist dem EU-U.S. Data Privacy Framework
+              beigetreten.
+            </p>
+            <div class="info-box">
+              Datenschutzerklärung Formspree:
+              <a
+                href="https://formspree.io/legal/privacy-policy"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://formspree.io/legal/privacy-policy</a
+              >
+            </div>
+
+            <h3>6. Google Fonts</h3>
+            <p>
+              Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten
+              Google Fonts der Google LLC, 1600 Amphitheatre Parkway, Mountain
+              View, CA 94043, USA. Beim Aufruf einer Seite lädt Ihr Browser die
+              benötigten Web Fonts und übermittelt dabei Ihre IP-Adresse an
+              Google. Der Einsatz erfolgt auf Basis von Art. 6 Abs. 1 lit. f
+              DSGVO (berechtigtes Interesse an einheitlicher Darstellung).
+            </p>
+            <p>
+              Weitere Informationen:
+              <a
+                href="https://policies.google.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://policies.google.com/privacy</a
+              >
+            </p>
+
+            <h3>7. Server-Logfiles</h3>
+            <p>
+              Der Provider dieser Website erhebt und speichert automatisch
+              Informationen in Server-Logfiles: Browsertyp und -version,
+              verwendetes Betriebssystem, Referrer-URL, Hostname, Uhrzeit der
+              Serveranfrage, IP-Adresse. Eine Zusammenführung mit anderen
+              Datenquellen wird nicht vorgenommen. Rechtsgrundlage ist Art. 6
+              Abs. 1 lit. f DSGVO.
+            </p>
+
+            <h3>8. Keine Cookies, kein Tracking</h3>
+            <p>
+              Diese Website setzt keine Tracking-Cookies und nutzt keine
+              Analyse- oder Werbe-Tracking-Dienste. Es werden ausschließlich die
+              unter Ziffer 4–7 beschriebenen Daten verarbeitet.
+            </p>
+
+            <h3>9. Datensicherheit</h3>
+            <p>
+              Diese Seite nutzt SSL-Verschlüsselung. Eine verschlüsselte
+              Verbindung erkennen Sie daran, dass die Adresszeile des Browsers
+              von „http://" auf „https://" wechselt.
+            </p>
+
+            <h3>10. Aktualität dieser Datenschutzerklärung</h3>
+            <p>
+              Diese Datenschutzerklärung hat den Stand:
+              <strong>Januar 2025</strong>. Änderungen vorbehalten.
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="ftr">
+      <div class="wrap">
+        <div class="ftr-inner">
+          <span
+            >&#169; 2025 Maler Fürstenfeldbruck &#8211; Alle Rechte
+            vorbehalten</span
+          >
+          <nav class="ftr-links" aria-label="Footer-Navigation">
+            <a href="#impressum">Impressum</a>
+            <a href="#datenschutz">Datenschutz</a>
+            <a href="maler-ffb.html">Startseite</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <button class="to-top" id="to-top" aria-label="Nach oben scrollen">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M5 15l7-7 7 7"
+        />
+      </svg>
+    </button>
+
+    <script>
+      (function () {
+        var tabs = {
+          impressum: document.getElementById("tab-impressum"),
+          datenschutz: document.getElementById("tab-datenschutz"),
+        };
+
+        function updateTabs() {
+          var scrollY = window.scrollY + 130;
+          var dsTop = document.getElementById("datenschutz").offsetTop;
+          var active = scrollY >= dsTop ? "datenschutz" : "impressum";
+          Object.keys(tabs).forEach(function (k) {
+            tabs[k].classList.toggle("active", k === active);
+          });
+        }
+        window.addEventListener("scroll", updateTabs, { passive: true });
+        updateTabs();
+
+        var topBtn = document.getElementById("to-top");
+        window.addEventListener(
+          "scroll",
+          function () {
+            topBtn.classList.toggle("show", window.scrollY > 400);
+          },
+          { passive: true },
+        );
+        topBtn.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+          a.addEventListener("click", function (e) {
+            var target = document.querySelector(this.getAttribute("href"));
+            if (!target) return;
+            e.preventDefault();
+            window.scrollTo({
+              top: target.getBoundingClientRect().top + window.scrollY - 110,
+              behavior: "smooth",
+            });
+          });
+        });
+
+        if (window.location.hash) {
+          setTimeout(function () {
+            var el = document.querySelector(window.location.hash);
+            if (el)
+              window.scrollTo({
+                top: el.getBoundingClientRect().top + window.scrollY - 110,
+                behavior: "smooth",
+              });
+          }, 120);
+        }
+      })();
+    </script>
+  </body>
+</html>
